@@ -3,10 +3,11 @@
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 
 [node name="World" type="Node2D"]
+position = Vector2( -17.4614, 57.1464 )
 scale = Vector2( 2, 2 )
 __meta__ = {
 "_editor_description_": "				"
 }
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 264.143, 150.041 )
+position = Vector2( 258.996, 130.339 )

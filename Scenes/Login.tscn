@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/Login.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.41431
+margin_right = 1.41431
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player_name" type="TextEdit" parent="."]
+margin_left = 235.0
+margin_top = 131.0
+margin_right = 814.0
+margin_bottom = 226.0
+text = "Player's name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bt_connect" type="Button" parent="."]
+margin_left = 304.292
+margin_top = 312.976
+margin_right = 453.292
+margin_bottom = 386.976
+text = "Connect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bt_exit" type="Button" parent="."]
+margin_left = 597.035
+margin_top = 314.39
+margin_right = 746.035
+margin_bottom = 388.39
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="bt_exit" to="." method="_on_bt_exit_pressed"]

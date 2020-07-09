@@ -8,6 +8,7 @@ func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
+
 	var move_vec = Vector2()
 	if(Input.is_action_pressed("ui_up")):
 		move_vec.y -= 1
@@ -21,4 +22,8 @@ func _physics_process(delta):
 	var _asdf = move_and_collide(move_vec * MOVE_SPEED * delta) #"_asdf" é um placeholder para o objeto que o jogador irá colidir
 	
 	var look_vec = get_global_mouse_position() - global_position
-	global_rotation = atan2(look_vec.y, look_vec.x)
+
+	$Sprite.rotation = atan2(look_vec.y, look_vec.x)-1.6
+	$CollisionShape2D.rotation = atan2(look_vec.y, look_vec.x)-1.6
+	$RayCast2D.rotation = atan2(look_vec.y, look_vec.x)-1.6
+	pass
